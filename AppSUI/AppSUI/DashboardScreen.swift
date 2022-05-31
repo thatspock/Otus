@@ -1,53 +1,46 @@
 import SwiftUI
 
-struct Food: Identifiable {
+struct FruitModel: Identifiable {
+    let id = UUID().uuidString
     let name: String
     let isFav: Bool
-    
-    var id = UUID().uuidString
 }
 
-final class FoodListViewModel {
-    @Published private(set) var foods = [
-        Food(name: "Banana", isFav: true),
-        Food(name: "Apple", isFav: false),
-        Food(name: "Strawberry", isFav: false),
-        Food(name: "Melon", isFav: true)
+final class FruitViewModel: ObservableObject {
+    @Published private(set) var fruitArray = [
+        FruitModel(name: "Banana", isFav: true),
+        FruitModel(name: "Apple", isFav: false),
+        FruitModel(name: "Strawberry", isFav: false),
+        FruitModel(name: "Melon", isFav: true)
     ]
+    
+    
 }
 
 final class DashboardViewModel: ObservableObject {
-    @Published var promos: [Int] = Array<Int>(0...20)
-    
-    init() {
-        
-    }
+    @Published var promos = Array(0...20)
 }
 
 struct DashboardScreen: View {
-    @EnvironmentObject var dashboardViewModel: DashboardViewModel
+    @StateObject var dashboardViewModel = DashboardViewModel()
+    
     var body: some View {
         VStack {
             PromosView()
-            Button {
-                // tbc
-            } label: {
-                Text("Submit!")
-            }
-
+            FoodListView()
         }
     }
 }
 
 struct FoodListView: View {
-    @StateObject var viewModel: FoodListViewModel = .init()
+    @StateObject var fruitViewModel = FruitViewModel()
     
     var body: some View {
         NavigationView {
             VStack {
-                List(viewModel.foods) { food in
-                    NavigationLink(destination: FoodScreen(title: food.name), label: {
-                        Text(food.name)
+                List(fruitViewModel.fruitArray) { fruit in
+                    NavigationLink(destination: FoodScreen(fruitViewModel: fruitViewModel), label: {
+                        Text(fruit.name)
                     })
                 }
             }
@@ -56,13 +49,13 @@ struct FoodListView: View {
 }
 
 struct PromosView: View {
-    @EnvironmentObject var dashboardViewModel: DashboardViewModel
+    @StateObject var dashboardViewModel = DashboardViewModel()
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack {
-                ForEach(dashboardViewModel.promos, id: \.self) { i in
-                    Text("\(i)")
+                ForEach(dashboardViewModel.promos, id: \.self) {
+                    Text("\($0)")
                 }
             }
         }
