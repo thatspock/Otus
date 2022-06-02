@@ -17,6 +17,7 @@
 		112761E8284536D4008F09D2 /* DashboardScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112761E7284536D4008F09D2 /* DashboardScreen.swift */; };
 		112761EA28453701008F09D2 /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112761E928453701008F09D2 /* ProfileScreen.swift */; };
 		112761EC28454021008F09D2 /* FoodScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112761EB28454021008F09D2 /* FoodScreen.swift */; };
+		112761EF2848DF54008F09D2 /* ModalScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112761EE2848DF53008F09D2 /* ModalScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		112761E7284536D4008F09D2 /* DashboardScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardScreen.swift; sourceTree = "<group>"; };
 		112761E928453701008F09D2 /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
 		112761EB28454021008F09D2 /* FoodScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodScreen.swift; sourceTree = "<group>"; };
+		112761EE2848DF53008F09D2 /* ModalScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				112761ED28478477008F09D2 /* Dashboard */,
 				112761BD28453648008F09D2 /* AppSUIApp.swift */,
 				112761BF28453648008F09D2 /* ContentView.swift */,
+				112761EE2848DF53008F09D2 /* ModalScreen.swift */,
 				112761E928453701008F09D2 /* ProfileScreen.swift */,
 				112761C12845364B008F09D2 /* Assets.xcassets */,
 				112761C32845364B008F09D2 /* Preview Content */,
@@ -277,6 +280,7 @@
 				112761EC28454021008F09D2 /* FoodScreen.swift in Sources */,
 				112761C028453648008F09D2 /* ContentView.swift in Sources */,
 				112761BE28453648008F09D2 /* AppSUIApp.swift in Sources */,
+				112761EF2848DF54008F09D2 /* ModalScreen.swift in Sources */,
 				112761E8284536D4008F09D2 /* DashboardScreen.swift in Sources */,
 				112761EA28453701008F09D2 /* ProfileScreen.swift in Sources */,
 			);

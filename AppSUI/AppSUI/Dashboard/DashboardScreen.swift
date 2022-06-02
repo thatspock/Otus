@@ -25,27 +25,12 @@ final class DashboardViewModel: ObservableObject {
 
 struct DashboardScreen: View {
     @StateObject var dashboardViewModel = DashboardViewModel()
-    @State var showModal = false
     
     var body: some View {
         NavigationView {
             VStack {
                 PromosView()
                 FoodListView()
-                Button {
-                    showModal.toggle()
-                } label: {
-                    Text("Show it!")
-                        .padding()
-                        .padding(.horizontal, 30)
-                        .background(.ultraThinMaterial)
-                        .cornerRadius(10)
-                        .foregroundColor(.primary)
-                }
-                .sheet(isPresented: $showModal) {
-                    Text("Some View")
-                }
-                Spacer()
             }
             .navigationBarHidden(true)
         }

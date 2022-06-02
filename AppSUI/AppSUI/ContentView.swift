@@ -1,20 +1,26 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var tabSelection = 0
+    @State private var tabSelection = 1
     
     var body: some View {
         TabView(selection: $tabSelection) {
-            DashboardScreen()
-                .tag(0)
-                .tabItem {
-                    Label("Dashboard", systemImage: "house")
-                }
-            
-            ProfileScreen()
+            ProfileScreen(tabSelection: $tabSelection)
                 .tag(1)
                 .tabItem {
                     Label("Profile", systemImage: "person")
+                }
+            
+            DashboardScreen()
+                .tag(2)
+                .tabItem {
+                    Label("Market", systemImage: "cart.fill")
+                }
+            
+            ModalScreen()
+                .tag(3)
+                .tabItem {
+                    Label("Message", systemImage: "paperplane.fill")
                 }
         }
     }
