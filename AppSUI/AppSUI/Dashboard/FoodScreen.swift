@@ -2,15 +2,19 @@ import SwiftUI
 
 struct FoodScreen: View {
     @Environment(\.presentationMode) var presentationMode
-    @ObservedObject var fruitViewModel: FruitViewModel = FruitViewModel()
+//    @StateObject var fruitViewModel = FruitViewModel()
+    var title: String
     
     var body: some View {
-        ZStack {
-            Color.teal.ignoresSafeArea()
             VStack {
-                ForEach(fruitViewModel.fruitArray) {
-                    Text($0.name)
-                }
+                Spacer()
+                
+                Text(title.uppercased())
+                    .font(.largeTitle)
+                    .fontWeight(.medium)
+                    .foregroundColor(.indigo)
+                
+                Spacer()
                 
                 Button {
                     presentationMode.wrappedValue.dismiss()
@@ -22,14 +26,14 @@ struct FoodScreen: View {
                         .background(.indigo)
                         .cornerRadius(10)
                         .foregroundColor(.white)
+                        .padding(.bottom, 40)
                 }
             }
-        }
     }
 }
 
 struct FoodScreen_Previews: PreviewProvider {
     static var previews: some View {
-        FoodScreen()
+        FoodScreen(title: "Test")
     }
 }

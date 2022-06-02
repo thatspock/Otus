@@ -8,13 +8,13 @@ struct ContentView: View {
             DashboardScreen()
                 .tag(0)
                 .tabItem {
-                    Label("Dashboard", systemImage: "person")
+                    Label("Dashboard", systemImage: "house")
                 }
             
             ProfileScreen()
                 .tag(1)
                 .tabItem {
-                    Image(systemName: "person.fill")
+                    Label("Profile", systemImage: "person")
                 }
         }
     }

@@ -100,11 +100,10 @@
 		112761BC28453648008F09D2 /* AppSUI */ = {
 			isa = PBXGroup;
 			children = (
+				112761ED28478477008F09D2 /* Dashboard */,
 				112761BD28453648008F09D2 /* AppSUIApp.swift */,
 				112761BF28453648008F09D2 /* ContentView.swift */,
 				112761E928453701008F09D2 /* ProfileScreen.swift */,
-				112761E7284536D4008F09D2 /* DashboardScreen.swift */,
-				112761EB28454021008F09D2 /* FoodScreen.swift */,
 				112761C12845364B008F09D2 /* Assets.xcassets */,
 				112761C32845364B008F09D2 /* Preview Content */,
 			);
@@ -134,6 +133,15 @@
 				112761DA2845364C008F09D2 /* AppSUIUITestsLaunchTests.swift */,
 			);
 			path = AppSUIUITests;
+			sourceTree = "<group>";
+		};
+		112761ED28478477008F09D2 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				112761E7284536D4008F09D2 /* DashboardScreen.swift */,
+				112761EB28454021008F09D2 /* FoodScreen.swift */,
+			);
+			path = Dashboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
