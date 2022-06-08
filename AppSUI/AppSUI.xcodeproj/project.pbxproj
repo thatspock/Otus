@@ -18,6 +18,7 @@
 		112761EA28453701008F09D2 /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112761E928453701008F09D2 /* ProfileScreen.swift */; };
 		112761EC28454021008F09D2 /* FoodScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112761EB28454021008F09D2 /* FoodScreen.swift */; };
 		112761EF2848DF54008F09D2 /* ModalScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112761EE2848DF53008F09D2 /* ModalScreen.swift */; };
+		113F6D37285117BD004B8083 /* NewsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113F6D36285117BD004B8083 /* NewsScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		112761E928453701008F09D2 /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
 		112761EB28454021008F09D2 /* FoodScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodScreen.swift; sourceTree = "<group>"; };
 		112761EE2848DF53008F09D2 /* ModalScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalScreen.swift; sourceTree = "<group>"; };
+		113F6D36285117BD004B8083 /* NewsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				112761ED28478477008F09D2 /* Dashboard */,
 				112761BD28453648008F09D2 /* AppSUIApp.swift */,
 				112761BF28453648008F09D2 /* ContentView.swift */,
+				113F6D36285117BD004B8083 /* NewsScreen.swift */,
 				112761EE2848DF53008F09D2 /* ModalScreen.swift */,
 				112761E928453701008F09D2 /* ProfileScreen.swift */,
 				112761C12845364B008F09D2 /* Assets.xcassets */,
@@ -277,6 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				113F6D37285117BD004B8083 /* NewsScreen.swift in Sources */,
 				112761EC28454021008F09D2 /* FoodScreen.swift in Sources */,
 				112761C028453648008F09D2 /* ContentView.swift in Sources */,
 				112761BE28453648008F09D2 /* AppSUIApp.swift in Sources */,

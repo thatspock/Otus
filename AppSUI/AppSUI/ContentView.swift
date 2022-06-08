@@ -22,6 +22,12 @@ struct ContentView: View {
                 .tabItem {
                     Label("Message", systemImage: "paperplane.fill")
                 }
+            
+            NewsScreen()
+                .tag(4)
+                .tabItem {
+                    Label("News", systemImage: "newspaper.fill")
+                }
         }
     }
 }
