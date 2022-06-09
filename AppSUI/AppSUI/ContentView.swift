@@ -6,7 +6,7 @@ struct ContentView: View {
     
     var body: some View {
         TabView(selection: $tabSelection) {
-            ProfileScreen(tabSelection: $tabSelection)
+            ProfileScreen(tabSelection: $tabSelection, isHidden: $isHidden)
                 .tag(1)
                 .tabItem {
                     Label("Profile", systemImage: "person")
@@ -16,9 +16,6 @@ struct ContentView: View {
                 .tag(2)
                 .tabItem {
                     Label("Market", systemImage: "cart.fill")
-                }
-                .onAppear {
-                    isHidden = true
                 }
             
             ModalScreen()

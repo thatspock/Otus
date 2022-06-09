@@ -2,17 +2,16 @@ import SwiftUI
 
 struct ProfileScreen: View {
     @Binding var tabSelection: Int
-    
+    @Binding var isHidden: Bool
     
     var body: some View {
         ZStack {
             VStack {
-                NavigationView {
-                    Text("Go To second screen")
-                        .onTapGesture {
-                            tabSelection = 2
-                        }
-                }
+                Text("Go To second screen")
+                    .onTapGesture {
+                        isHidden = true
+                        tabSelection = 2
+                    }
             }
         }
     }
@@ -20,6 +19,6 @@ struct ProfileScreen: View {
 
 struct ProfileScreen_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileScreen(tabSelection: .constant(2))
+        ProfileScreen(tabSelection: .constant(2), isHidden: .constant(false))
     }
 }

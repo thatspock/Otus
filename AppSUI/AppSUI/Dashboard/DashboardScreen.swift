@@ -79,8 +79,8 @@ struct FoodListView: View {
                     }
                 }
                 .listRowSeparator(.hidden)
+                .overlay(NavigationLink(destination: FoodScreen(title: "Banana"), isActive: $isHidden) { EmptyView()}.hidden())
             }
-            .overlay(NavigationLink(destination: FoodScreen(title: "Banana"), isActive: $isHidden) { EmptyView()}.hidden())
             .listStyle(.inset)
         }
     }
