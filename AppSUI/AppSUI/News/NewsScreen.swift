@@ -1,11 +1,25 @@
 import SwiftUI
+import NewsNetwork
+
+extension Article: Identifiable {
+    public var id: String { url }
+}
 
 final class NewsViewModel: ObservableObject {
     @Published var listType = 0
     var listTypes = ["List", "Grid", "Grid iOS 13"]
     
+    @Published var articles: [Article] = .init()
+    
     init() {
-        
+        ArticlesAPI.everythingGet(q: "ios 16",
+                                  from: "2022-06-01",
+                                  sortBy: "pubishedAt",
+                                  language: "en",
+                                  apiKey: "02bc5fb2d8ae4d73973e8fe89b93570f") { list, error in
+            debugPrint("👺", error ?? "no error")
+            self.articles = list?.articles ?? []
+        }
     }
 }
 
@@ -40,8 +54,9 @@ struct NewsScreen: View {
     }
     
     var list: some View {
-        List() {
-            Text("List")
+        List(newsViewModel.articles) {
+            ArticleCell(title: "\($0.title.asStringOrEmpty)",
+                        description: "\($0.description.asStringOrEmpty)")
                 .listRowSeparator(.hidden)
         }
         .listStyle(.inset)

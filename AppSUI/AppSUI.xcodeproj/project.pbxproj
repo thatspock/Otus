@@ -20,6 +20,8 @@
 		112761EF2848DF54008F09D2 /* ModalScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112761EE2848DF53008F09D2 /* ModalScreen.swift */; };
 		113F6D37285117BD004B8083 /* NewsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113F6D36285117BD004B8083 /* NewsScreen.swift */; };
 		114DC7F0285238B000FC7C78 /* NewsNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = 114DC7EF285238B000FC7C78 /* NewsNetwork */; };
+		114DC7F7285250E700FC7C78 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114DC7F6285250E700FC7C78 /* ArticleCell.swift */; };
+		114DC7FA285253B500FC7C78 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114DC7F9285253B500FC7C78 /* Optional.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		114DC7EC285237B400FC7C78 /* generate.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = generate.sh; sourceTree = SOURCE_ROOT; };
 		114DC7ED285237B400FC7C78 /* newsapi.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = newsapi.yaml; sourceTree = SOURCE_ROOT; };
 		114DC7EE285237F000FC7C78 /* NewsNetwork */ = {isa = PBXFileReference; lastKnownFileType = text; name = NewsNetwork; path = Modules/NewsNetwork; sourceTree = SOURCE_ROOT; };
+		114DC7F6285250E700FC7C78 /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
+		114DC7F9285253B500FC7C78 /* Optional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,17 +114,17 @@
 		112761BC28453648008F09D2 /* AppSUI */ = {
 			isa = PBXGroup;
 			children = (
+				114DC7F82852539300FC7C78 /* Extension */,
+				114DC7F42852410900FC7C78 /* Views */,
+				112761ED28478477008F09D2 /* Dashboard */,
+				114DC7F12852407D00FC7C78 /* News */,
+				114DC7F2285240B400FC7C78 /* Profile */,
+				114DC7F3285240CA00FC7C78 /* Modal */,
+				114DC7F52852412400FC7C78 /* OtherFiles */,
+				112761C32845364B008F09D2 /* Preview Content */,
 				114DC7EE285237F000FC7C78 /* NewsNetwork */,
 				114DC7EC285237B400FC7C78 /* generate.sh */,
 				114DC7ED285237B400FC7C78 /* newsapi.yaml */,
-				112761ED28478477008F09D2 /* Dashboard */,
-				112761BD28453648008F09D2 /* AppSUIApp.swift */,
-				112761BF28453648008F09D2 /* ContentView.swift */,
-				113F6D36285117BD004B8083 /* NewsScreen.swift */,
-				112761EE2848DF53008F09D2 /* ModalScreen.swift */,
-				112761E928453701008F09D2 /* ProfileScreen.swift */,
-				112761C12845364B008F09D2 /* Assets.xcassets */,
-				112761C32845364B008F09D2 /* Preview Content */,
 			);
 			path = AppSUI;
 			sourceTree = "<group>";
@@ -164,6 +168,56 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		114DC7F12852407D00FC7C78 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				113F6D36285117BD004B8083 /* NewsScreen.swift */,
+				114DC7F6285250E700FC7C78 /* ArticleCell.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		114DC7F2285240B400FC7C78 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				112761E928453701008F09D2 /* ProfileScreen.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		114DC7F3285240CA00FC7C78 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				112761EE2848DF53008F09D2 /* ModalScreen.swift */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		114DC7F42852410900FC7C78 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				112761BF28453648008F09D2 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		114DC7F52852412400FC7C78 /* OtherFiles */ = {
+			isa = PBXGroup;
+			children = (
+				112761C12845364B008F09D2 /* Assets.xcassets */,
+				112761BD28453648008F09D2 /* AppSUIApp.swift */,
+			);
+			path = OtherFiles;
+			sourceTree = "<group>";
+		};
+		114DC7F82852539300FC7C78 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				114DC7F9285253B500FC7C78 /* Optional.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,7 +353,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				114DC7F7285250E700FC7C78 /* ArticleCell.swift in Sources */,
 				113F6D37285117BD004B8083 /* NewsScreen.swift in Sources */,
+				114DC7FA285253B500FC7C78 /* Optional.swift in Sources */,
 				112761EC28454021008F09D2 /* FoodScreen.swift in Sources */,
 				112761C028453648008F09D2 /* ContentView.swift in Sources */,
 				112761BE28453648008F09D2 /* AppSUIApp.swift in Sources */,

@@ -54,12 +54,12 @@ open class ArticlesAPI {
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
         localVariableUrlComponents?.queryItems = APIHelper.mapValuesToQueryItems([
-            "q": q.encodeToJSON(),
-            "from": from.encodeToJSON(),
-            "sortBy": sortBy.encodeToJSON(),
-            "language": language.encodeToJSON(),
-            "apiKey": apiKey.encodeToJSON(),
-            "page": page?.encodeToJSON(),
+            "q": q,
+            "from": from,
+            "sortBy": sortBy,
+            "language": language,
+            "apiKey": apiKey,
+            "page": page ?? 1,
         ])
 
         let localVariableNillableHeaders: [String: Any?] = [
