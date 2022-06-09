@@ -3,15 +3,15 @@ import SwiftUI
 struct ProfileScreen: View {
     @Binding var tabSelection: Int
     
+    
     var body: some View {
         ZStack {
             VStack {
                 NavigationView {
-                    Button {
-                        tabSelection = 2
-                    } label: {
-                        Text("Go To second screen")
-                    }
+                    Text("Go To second screen")
+                        .onTapGesture {
+                            tabSelection = 2
+                        }
                 }
             }
         }

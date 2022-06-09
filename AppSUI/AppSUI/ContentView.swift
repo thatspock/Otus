@@ -2,6 +2,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var tabSelection = 1
+    @State private var isHidden = false
     
     var body: some View {
         TabView(selection: $tabSelection) {
@@ -11,10 +12,13 @@ struct ContentView: View {
                     Label("Profile", systemImage: "person")
                 }
            
-            DashboardScreen()
+            DashboardScreen(isHidden: $isHidden)
                 .tag(2)
                 .tabItem {
                     Label("Market", systemImage: "cart.fill")
+                }
+                .onAppear {
+                    isHidden = true
                 }
             
             ModalScreen()

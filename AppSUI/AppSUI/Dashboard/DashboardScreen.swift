@@ -25,12 +25,13 @@ final class DashboardViewModel: ObservableObject {
 
 struct DashboardScreen: View {
     @StateObject var dashboardViewModel = DashboardViewModel()
+    @Binding var isHidden: Bool
     
     var body: some View {
         NavigationView {
             VStack {
                 PromosView()
-                FoodListView()
+                FoodListView(isHidden: $isHidden)
             }
             .navigationBarHidden(true)
         }
@@ -59,6 +60,7 @@ struct PromosView: View {
 struct FoodListView: View {
     @StateObject var fruitViewModel = FruitViewModel()
     @State private var isFavShowed = false
+    @Binding var isHidden: Bool
     
     var body: some View {
         VStack {
@@ -78,6 +80,7 @@ struct FoodListView: View {
                 }
                 .listRowSeparator(.hidden)
             }
+            .overlay(NavigationLink(destination: FoodScreen(title: "Banana"), isActive: $isHidden) { EmptyView()}.hidden())
             .listStyle(.inset)
         }
     }
@@ -94,6 +97,6 @@ struct FruitFilterView: View {
 
 struct DashboardScreen_Previews: PreviewProvider {
     static var previews: some View {
-        DashboardScreen()
+        DashboardScreen(isHidden: .constant(true))
     }
 }

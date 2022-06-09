@@ -2,7 +2,6 @@ import SwiftUI
 
 struct FoodScreen: View {
     @Environment(\.presentationMode) var presentationMode
-//    @StateObject var fruitViewModel = FruitViewModel()
     var title: String
     
     var body: some View {
