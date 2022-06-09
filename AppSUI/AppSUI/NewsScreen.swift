@@ -20,7 +20,8 @@ struct NewsScreen: View {
                         .tag($0)
                 }
             }
-            .pickerStyle(SegmentedPickerStyle())
+            .pickerStyle(.segmented)
+            .padding(.top, 30)
             
             
             switch newsViewModel.listType  {
@@ -29,25 +30,37 @@ struct NewsScreen: View {
             case 1:
                 grid
             case 2:
-                gridOS13
+                gridiOS13
             default:
                 EmptyView()
             }
+            
+            Spacer()
         }
     }
     
     var list: some View {
         List() {
             Text("List")
+                .listRowSeparator(.hidden)
         }
+        .listStyle(.inset)
     }
     
     var grid: some View {
-        EmptyView()
+        List() {
+            Text("Grid")
+                .listRowSeparator(.hidden)
+        }
+        .listStyle(.inset)
     }
     
-    var gridOS13: some View {
-        EmptyView()
+    var gridiOS13: some View {
+        List() {
+            Text("Grid iOS 13")
+                .listRowSeparator(.hidden)
+        }
+        .listStyle(.inset)
     }
 }
 

@@ -19,6 +19,7 @@
 		112761EC28454021008F09D2 /* FoodScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112761EB28454021008F09D2 /* FoodScreen.swift */; };
 		112761EF2848DF54008F09D2 /* ModalScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112761EE2848DF53008F09D2 /* ModalScreen.swift */; };
 		113F6D37285117BD004B8083 /* NewsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113F6D36285117BD004B8083 /* NewsScreen.swift */; };
+		114DC7F0285238B000FC7C78 /* NewsNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = 114DC7EF285238B000FC7C78 /* NewsNetwork */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,9 @@
 		112761EB28454021008F09D2 /* FoodScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodScreen.swift; sourceTree = "<group>"; };
 		112761EE2848DF53008F09D2 /* ModalScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalScreen.swift; sourceTree = "<group>"; };
 		113F6D36285117BD004B8083 /* NewsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsScreen.swift; sourceTree = "<group>"; };
+		114DC7EC285237B400FC7C78 /* generate.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = generate.sh; sourceTree = SOURCE_ROOT; };
+		114DC7ED285237B400FC7C78 /* newsapi.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = newsapi.yaml; sourceTree = SOURCE_ROOT; };
+		114DC7EE285237F000FC7C78 /* NewsNetwork */ = {isa = PBXFileReference; lastKnownFileType = text; name = NewsNetwork; path = Modules/NewsNetwork; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				114DC7F0285238B000FC7C78 /* NewsNetwork in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +93,7 @@
 				112761CD2845364C008F09D2 /* AppSUITests */,
 				112761D72845364C008F09D2 /* AppSUIUITests */,
 				112761BB28453648008F09D2 /* Products */,
+				113F6D3B285235ED004B8083 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +110,9 @@
 		112761BC28453648008F09D2 /* AppSUI */ = {
 			isa = PBXGroup;
 			children = (
+				114DC7EE285237F000FC7C78 /* NewsNetwork */,
+				114DC7EC285237B400FC7C78 /* generate.sh */,
+				114DC7ED285237B400FC7C78 /* newsapi.yaml */,
 				112761ED28478477008F09D2 /* Dashboard */,
 				112761BD28453648008F09D2 /* AppSUIApp.swift */,
 				112761BF28453648008F09D2 /* ContentView.swift */,
@@ -150,6 +159,13 @@
 			path = Dashboard;
 			sourceTree = "<group>";
 		};
+		113F6D3B285235ED004B8083 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -166,6 +182,9 @@
 			dependencies = (
 			);
 			name = AppSUI;
+			packageProductDependencies = (
+				114DC7EF285238B000FC7C78 /* NewsNetwork */,
+			);
 			productName = AppSUI;
 			productReference = 112761BA28453648008F09D2 /* AppSUI.app */;
 			productType = "com.apple.product-type.application";
@@ -633,6 +652,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		114DC7EF285238B000FC7C78 /* NewsNetwork */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NewsNetwork;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 112761B228453647008F09D2 /* Project object */;
 }
