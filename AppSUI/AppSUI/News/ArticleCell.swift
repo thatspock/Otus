@@ -6,7 +6,7 @@ struct ArticleCell: View {
     
     
     var body: some View {
-        ZStack {
+        ZStack(alignment: .leading) {
             RoundedRectangle(cornerRadius: 20, style: .continuous)
                 .foregroundColor(.gray.opacity(0.1))
             
@@ -24,6 +24,6 @@ struct ArticleCell: View {
 
 struct ArticleCell_Previews: PreviewProvider {
     static var previews: some View {
-        ArticleCell(title: "SwiftUI’s built-in shapes", description: "SwiftUI gives us five built-in shapes that are commonly used: rectangle, rounded rectangle, circle, ellipse, and capsule.")
+        ArticleCell(title: "SwiftUI’s built-in shapes.", description: "SwiftUI gives us five built-in shapes that are commonly used: rectangle, rounded rectangle, circle, ellipse, and capsule.")
     }
 }
