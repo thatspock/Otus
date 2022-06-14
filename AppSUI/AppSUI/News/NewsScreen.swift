@@ -8,6 +8,8 @@ extension Article: Identifiable {
 final class NewsViewModel: ObservableObject {
     @Published var listType = 0
     var listTypes = ["List", "Grid", "Grid iOS 13"]
+    var lazyGrid: [GridItem] = Array(repeating: .init(), count: 2)
+    var gridiOS13: [[Article]] = .init()
     
     @Published var articles: [Article] = .init()
     
@@ -19,6 +21,14 @@ final class NewsViewModel: ObservableObject {
                                   apiKey: "02bc5fb2d8ae4d73973e8fe89b93570f") { list, error in
             debugPrint("👺", error ?? "no error")
             self.articles = list?.articles ?? []
+            self.collectArticlesGridIOS13()
+        }
+    }
+    
+    func collectArticlesGridIOS13() {
+        let columned = articles.publisher.collect(3)
+        _ = columned.collect().sink {
+            self.gridiOS13 = $0
         }
     }
 }
@@ -36,7 +46,6 @@ struct NewsScreen: View {
             }
             .pickerStyle(.segmented)
             .padding(.top, 30)
-            
             
             switch newsViewModel.listType  {
             case 0:
@@ -63,19 +72,31 @@ struct NewsScreen: View {
     }
     
     var grid: some View {
-        List() {
-            Text("Grid")
-                .listRowSeparator(.hidden)
+        ScrollView {
+            LazyVGrid(columns: newsViewModel.lazyGrid) {
+                ForEach(newsViewModel.articles) {
+                    ArticleCell(title: "\($0.title.asStringOrEmpty)",
+                                description: "\($0.description.asStringOrEmpty)")
+                }
+            }
+            .padding()
         }
-        .listStyle(.inset)
     }
     
     var gridiOS13: some View {
-        List() {
-            Text("Grid iOS 13")
-                .listRowSeparator(.hidden)
+        ScrollView {
+            VStack(spacing: 8) {
+                ForEach(0..<newsViewModel.gridiOS13.count) { row in
+                    HStack(spacing: 8) {
+                        ForEach(newsViewModel.gridiOS13[row]) {
+                            ArticleCell(title: "\($0.title.asStringOrEmpty)",
+                                        description: "\($0.description.asStringOrEmpty)")
+                        }
+                    }
+                    .padding()
+                }
+            }
         }
-        .listStyle(.inset)
     }
 }
 

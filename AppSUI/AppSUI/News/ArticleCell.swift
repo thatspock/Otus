@@ -1,9 +1,10 @@
 import SwiftUI
 
 struct ArticleCell: View {
+    @StateObject var newsViewModel = NewsViewModel()
+    
     var title: String
     var description: String
-    
     
     var body: some View {
         ZStack(alignment: .leading) {
