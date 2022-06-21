@@ -1,13 +1,13 @@
 //
-//  Test_NavigationUITestsLaunchTests.swift
-//  Test-NavigationUITests
+//  PaginateAPIUITestsLaunchTests.swift
+//  PaginateAPIUITests
 //
-//  Created by mr spock on 6/14/22.
+//  Created by mr spock on 6/21/22.
 //
 
 import XCTest
 
-class Test_NavigationUITestsLaunchTests: XCTestCase {
+class PaginateAPIUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

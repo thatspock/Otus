@@ -1,14 +1,14 @@
 //
-//  Test_NavigationApp.swift
-//  Test-Navigation
+//  PaginateAPIApp.swift
+//  PaginateAPI
 //
-//  Created by mr spock on 6/14/22.
+//  Created by mr spock on 6/21/22.
 //
 
 import SwiftUI
 
 @main
-struct Test_NavigationApp: App {
+struct PaginateAPIApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
